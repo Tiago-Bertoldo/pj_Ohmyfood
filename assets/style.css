@@ -11,7 +11,7 @@
   height: 100px;
   margin: 0 auto;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0px 10px 13px -7px #000000, 1px 3px 13px 15px rgba(156, 147, 147, 0.12);
+  box-shadow: 0px 10px 13px -12px #000000, 1px 3px 13px 15px rgba(156, 147, 147, 0.12);
   position: relative;
   border: 1px soild;
   justify-content: space-around;
@@ -29,10 +29,10 @@
   width: 65%;
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 245, 245, 0.648);
+  background-color: rgba(231, 235, 234, 0.6078431373);
   font-weight: 700;
-  border-radius: 10px;
-  margin-top: 1em;
+  border-radius: 20px;
+  margin-top: 3em;
   position: relative;
 }
 .box-cartes__h1 {
@@ -103,10 +103,79 @@
 }
 
 .aside {
+  margin: 3em auto;
+  width: 32%;
+  background-color: rgba(231, 235, 234, 0.6078431373);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.aside__top, .aside__reserve, .aside__functionne {
+  width: 100%;
+}
+.aside__top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: rgb(82, 82, 82);
+  background-color: rgb(235, 233, 233);
+  border-radius: 20px 20px 0 0;
+}
+.aside__top p {
+  margin: 1em;
+}
+.aside__top i {
+  color: black;
+}
+.aside__reserve {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  justify-items: center;
+}
+.aside__reserve h1 {
+  width: 80%;
+  text-align-last: center;
+  margin-top: 1.5em;
+}
+.aside__reserve p {
+  margin-top: -0.5em;
+  width: 80%;
+  font-size: 13px;
+  text-align: center;
+  line-height: 1.3;
+  word-wrap: break-word;
+  font-weight: 500;
+  color: rgb(107, 107, 107);
+}
+.aside__reserve a {
   margin-top: 1em;
-  width: 30%;
-  background-color: rgba(255, 245, 245, 0.648);
-  border-radius: 10px;
+  padding: 1em;
+  border-radius: 20px;
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+  color: white;
+  font-size: 14px;
+  box-shadow: 0px 10px 13px -12px #000000, 1px 3px 13px 15px rgba(156, 147, 147, 0.12);
+  border: none;
+  transition: transform 200ms, color 250ms ease-in-out;
+}
+.aside__reserve a:active {
+  transform: scale(1.15);
+}
+.aside__functionne {
+  margin-top: 2em;
+  border: 1px solid black;
+}
+.aside .footer-container {
+  border: 1px solid black;
+  width: 100%;
+  margin: auto;
+  max-width: 1024px;
 }
 
 #header {
@@ -115,6 +184,7 @@
   margin: auto;
   background-size: cover;
   flex-direction: column;
+  background: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
 }
 
 .container {
@@ -123,6 +193,7 @@
   margin: auto;
   background-size: cover;
   flex-direction: column;
+  background: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
   background: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
   background-size: cover;
 }
@@ -135,6 +206,11 @@
   justify-content: space-around;
   font-family: "Shrikhand", cursive;
   text-decoration: none;
+}
+
+footer {
+  background-color: rgb(79, 76, 76);
+  min-height: 200px;
 }
 
 /*# sourceMappingURL=style.css.map */
