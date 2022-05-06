@@ -5,7 +5,7 @@
 
 .container {
     @include container;
-    background: url(images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg) no-repeat;
+    background: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
     background-size: cover;
 }
 
@@ -13,4 +13,5 @@
     @include sections;
     justify-content: space-around;
     font-family: $shrikhand;
+    text-decoration: none;
 }

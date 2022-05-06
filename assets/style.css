@@ -33,6 +33,7 @@
   font-weight: 700;
   border-radius: 10px;
   margin-top: 1em;
+  position: relative;
 }
 .box-cartes__h1 {
   margin-left: 0.6em;
@@ -48,14 +49,14 @@
   background-color: white;
   margin: 1em auto;
   position: relative;
-  z-index: 1;
+  justify-content: space-around;
 }
 .box-cartes__config span {
   position: absolute;
   color: white;
   z-index: 999;
   top: 10px;
-  left: 43%;
+  left: 37%;
   background-color: #99E2D0;
   padding: 0.5em 1.5em;
   font-size: 15px;
@@ -76,6 +77,7 @@
   line-height: 1;
   margin: 2em auto;
   color: black;
+  text-decoration: none;
 }
 .box-cartes__text p:nth-child(2) {
   font-weight: 400;
@@ -89,9 +91,15 @@
   position: relative;
   box-sizing: border-box;
   z-index: 1;
+  width: 5%;
 }
 .box-cartes__icons :active {
   background: blue;
+}
+.box-cartes__links {
+  display: flex;
+  width: 94%;
+  text-decoration: none;
 }
 
 .aside {
@@ -115,7 +123,7 @@
   margin: auto;
   background-size: cover;
   flex-direction: column;
-  background: url(/assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg) no-repeat;
+  background: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
   background-size: cover;
 }
 
@@ -126,6 +134,7 @@
   display: flex;
   justify-content: space-around;
   font-family: "Shrikhand", cursive;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
