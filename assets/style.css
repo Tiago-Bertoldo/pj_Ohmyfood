@@ -108,7 +108,8 @@
   transition: transform 250ms;
 }
 .box-cartes__config:hover {
-  transform: scale(1.1);
+  transform: scale(1.02);
+  opacity: 0.8;
 }
 
 .aside {
@@ -301,7 +302,7 @@
   display: flex;
   margin: auto;
   flex-direction: column;
-  background: url(/assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background: url(./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   background-size: cover;
   border: 1px solid black;
 }

@@ -103,7 +103,8 @@
         transition: transform 250ms;
 
     }&__config:hover {
-        transform: scale(1.1);
+        transform: scale(1.02);
+        opacity: 0.8;
     }
 
 }
