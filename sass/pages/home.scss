@@ -26,19 +26,17 @@
 
 
 .box-cartes {
-    width: 65%;
+    width: 55%;
     display: flex;
     flex-direction: column;
     background-color: $backgroundFund;
-    font-weight: 700;
+    font-weight: 500;
     border-radius: 20px;
-    margin-top: 3em;
+    margin: 3em auto;
     position: relative;
     
     &__h1 {
-        margin-left: 0.6em;
-        color: black;
-        font-family: $roboto;
+       @include tailleh1;
     }
 
     &__config {
@@ -51,12 +49,14 @@
         margin: 1em auto;
         position: relative;
         justify-content: space-around;
+        transition: all 250ms;
     }
+
     &__config span {
         position: absolute;
         color: white;
         z-index: 999;
-        top: 10px; left: 37%;
+        top: 10px; left: 43%;
         background-color: $tertiaire;
         padding: 0.5em 1.5em;
         font-size: 15px;
@@ -65,41 +65,45 @@
     }
     &__config img {
         object-fit: cover;
-        width: 60%;
+        width: 65%;
         align-items: center;
         border-radius: 10px 0px 0px 10px ;
     }&__text {
+        width: 30%;
         display: flex;
         flex-direction: column;
         font-size: 20px;
         font-weight: 800;
-        line-height: 1;
-        margin: 2em auto;
+        line-height: 0;
+        margin: 3em 0 0 1em;
         color: black;
         text-decoration: none;
     }&__text p:nth-child(2){
         font-weight: 400;
     }
     &__icons {
-        margin: 0.6em auto;
+        margin: 0.8em 0.8em 0em 0;
         font-size: 2em; 
-        color: black;
         text-decoration: none;
         cursor: pointer;
         position: relative;
         box-sizing: border-box;
         z-index: 1;
-        width: 5%;
-
-
+        width: 3%;
+    }&__icons i {
+        color: rgb(209, 207, 207);
     }
-    &__icons :active {
-        background: blue;
+    &__icons i:active {
+        color: $primaire;
     }
     &__links {
         display: flex;
         width: calc(100% - 6%);
         text-decoration: none;
+        transition: transform 250ms;
+
+    }&__config:hover {
+        transform: scale(1.1);
     }
 
 }
@@ -107,11 +111,13 @@
 //ASIDE
 .aside {
     margin: 3em auto;
-    width: 32%;
+    width:30%;
     background-color: $backgroundFund;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    height: 720px;
+    margin-bottom: 2em;
 
     &__top , &__reserve , &__functionne{
         width: 100%;
@@ -146,6 +152,7 @@
         width: 80%;
         text-align-last: center;
         margin-top: 1.5em;
+        text-align: center;
     }&__reserve p {
         margin-top: -0.5em;
         width: 80%;
@@ -163,19 +170,103 @@
         transform: scale(1.15);
     }
     &__functionne {
-        margin-top: 2em;
-        border: 1px solid black;
-    }
-
-    .footer-container {
-            border: 1px solid black;
-            width: 100%;
-            margin: auto;
-            max-width: 1024px;
-    }
+        margin-top: 3em;
+    }&__functionne h1 {
+        @include tailleh1;
+    }&__menu {
+        width: 100%;
+        display: flex;
+    }&__menu ul {
+        @include marginEpadding;
+        list-style: none;
+        width: 90%;
+        margin: auto;
+        cursor: pointer;
     
+
+    }&__menu li {
+        border-radius: 20px;
+        width: 100%;
+        max-width: 500px;
+        margin-top: 2em;
+        text-align: center;
+        display: flex;
+        height: 60px;
+        position: relative;
+        background-color: #f6f6f6;
+        box-shadow: $efectTop;
+        transition: all 250ms ;
+    }&__menu a {
+        font-size: 15px;
+        text-decoration: none;
+        color: black;
+        font-family: $roboto;
+        display: flex;
+        align-items: center;
+        margin-left: 1em;
+        font-weight: 600;
+    }&__menu span {
+        display: flex;
+        position: absolute;
+        left: -9px;
+        top: 13px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        color: white;
+        font-size: 10px;
+        justify-content: center;
+        align-items: center;
+        background-color: $primaire;
+        font-family: $roboto;
+    }&__menu i {
+        font-size: 15px;
+        display: flex;
+        margin-left: 2em;
+        align-items: center;
+        color: #aaaaaa;
+        transition: all 250ms ;
+       
+    }&__menu li:hover {
+        transform: scale(1.05);
+        background-color: #f5edff;
+    }&__menu i:hover {
+        color: #f5edff;
+    }
    
 }
 
 
 
+.footer {
+    display: flex;
+    width: 100%;
+    background-color: #3f3f3f;
+    margin: auto;
+    &__container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-family: $shrikhand;
+        color: white;
+        flex-direction: column;
+    }&__container h1 {
+        margin-left: 3.3em;
+        font-size: 18px;
+    }
+    &__container ul {
+        list-style: none;
+    }
+    &__container li {
+        margin-bottom: 2em;
+    }
+    &__container a {
+        color: white;
+        text-decoration: none;
+        font-family: $roboto;
+        font-size: 12px;
+    }
+    &__container i{
+        margin-right: 0.5em;
+    }
+}

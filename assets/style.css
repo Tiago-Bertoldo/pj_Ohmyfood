@@ -26,18 +26,19 @@
 }
 
 .box-cartes {
-  width: 65%;
+  width: 55%;
   display: flex;
   flex-direction: column;
   background-color: rgba(231, 235, 234, 0.6078431373);
-  font-weight: 700;
+  font-weight: 500;
   border-radius: 20px;
-  margin-top: 3em;
+  margin: 3em auto;
   position: relative;
 }
 .box-cartes__h1 {
-  margin-left: 0.6em;
+  margin-left: 0.7em;
   color: black;
+  font-size: 30px;
   font-family: "Roboto", sans-serif;
 }
 .box-cartes__config {
@@ -50,13 +51,14 @@
   margin: 1em auto;
   position: relative;
   justify-content: space-around;
+  transition: all 250ms;
 }
 .box-cartes__config span {
   position: absolute;
   color: white;
   z-index: 999;
   top: 10px;
-  left: 37%;
+  left: 43%;
   background-color: #99E2D0;
   padding: 0.5em 1.5em;
   font-size: 15px;
@@ -65,17 +67,18 @@
 }
 .box-cartes__config img {
   object-fit: cover;
-  width: 60%;
+  width: 65%;
   align-items: center;
   border-radius: 10px 0px 0px 10px;
 }
 .box-cartes__text {
+  width: 30%;
   display: flex;
   flex-direction: column;
   font-size: 20px;
   font-weight: 800;
-  line-height: 1;
-  margin: 2em auto;
+  line-height: 0;
+  margin: 3em 0 0 1em;
   color: black;
   text-decoration: none;
 }
@@ -83,32 +86,40 @@
   font-weight: 400;
 }
 .box-cartes__icons {
-  margin: 0.6em auto;
+  margin: 0.8em 0.8em 0em 0;
   font-size: 2em;
-  color: black;
   text-decoration: none;
   cursor: pointer;
   position: relative;
   box-sizing: border-box;
   z-index: 1;
-  width: 5%;
+  width: 3%;
 }
-.box-cartes__icons :active {
-  background: blue;
+.box-cartes__icons i {
+  color: rgb(209, 207, 207);
+}
+.box-cartes__icons i:active {
+  color: #9356DC;
 }
 .box-cartes__links {
   display: flex;
   width: 94%;
   text-decoration: none;
+  transition: transform 250ms;
+}
+.box-cartes__config:hover {
+  transform: scale(1.1);
 }
 
 .aside {
   margin: 3em auto;
-  width: 32%;
+  width: 30%;
   background-color: rgba(231, 235, 234, 0.6078431373);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  height: 720px;
+  margin-bottom: 2em;
 }
 .aside__top, .aside__reserve, .aside__functionne {
   width: 100%;
@@ -141,6 +152,7 @@
   width: 80%;
   text-align-last: center;
   margin-top: 1.5em;
+  text-align: center;
 }
 .aside__reserve p {
   margin-top: -0.5em;
@@ -168,49 +180,151 @@
   transform: scale(1.15);
 }
 .aside__functionne {
-  margin-top: 2em;
-  border: 1px solid black;
+  margin-top: 3em;
 }
-.aside .footer-container {
-  border: 1px solid black;
+.aside__functionne h1 {
+  margin-left: 0.7em;
+  color: black;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+}
+.aside__menu {
   width: 100%;
+  display: flex;
+}
+.aside__menu ul {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  width: 90%;
   margin: auto;
-  max-width: 1024px;
+  cursor: pointer;
+}
+.aside__menu li {
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 2em;
+  text-align: center;
+  display: flex;
+  height: 60px;
+  position: relative;
+  background-color: #f6f6f6;
+  box-shadow: 0px 10px 13px -12px #000000, 1px 3px 13px 15px rgba(156, 147, 147, 0.12);
+  transition: all 250ms;
+}
+.aside__menu a {
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+  font-weight: 600;
+}
+.aside__menu span {
+  display: flex;
+  position: absolute;
+  left: -9px;
+  top: 13px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  color: white;
+  font-size: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356DC;
+  font-family: "Roboto", sans-serif;
+}
+.aside__menu i {
+  font-size: 15px;
+  display: flex;
+  margin-left: 2em;
+  align-items: center;
+  color: #aaaaaa;
+  transition: all 250ms;
+}
+.aside__menu li:hover {
+  transform: scale(1.05);
+  background-color: #f5edff;
+}
+.aside__menu i:hover {
+  color: #f5edff;
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  background-color: #3f3f3f;
+  margin: auto;
+}
+.footer__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Shrikhand", cursive;
+  color: white;
+  flex-direction: column;
+}
+.footer__container h1 {
+  margin-left: 3.3em;
+  font-size: 18px;
+}
+.footer__container ul {
+  list-style: none;
+}
+.footer__container li {
+  margin-bottom: 2em;
+}
+.footer__container a {
+  color: white;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+.footer__container i {
+  margin-right: 0.5em;
 }
 
 #header {
   width: 100%;
   display: flex;
   margin: auto;
-  background-size: cover;
   flex-direction: column;
-  background: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
 }
 
 .container {
   width: 100%;
   display: flex;
   margin: auto;
-  background-size: cover;
   flex-direction: column;
-  background: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-  background: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background: url(/assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   background-size: cover;
+  border: 1px solid black;
 }
 
 #cartes {
   width: 100%;
-  max-width: 1024px;
   margin: auto;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  padding: 0;
   font-family: "Shrikhand", cursive;
   text-decoration: none;
+  width: 100%;
+  max-width: 1600px;
 }
 
 footer {
   background-color: rgb(79, 76, 76);
   min-height: 200px;
+  width: 100%;
+  margin: auto;
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */
