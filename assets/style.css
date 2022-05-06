@@ -25,6 +25,10 @@
   z-index: 999;
 }
 
+main {
+  overflow: hidden;
+}
+
 .box-cartes {
   width: 55%;
   display: flex;
@@ -77,12 +81,13 @@
   flex-direction: column;
   font-size: 20px;
   font-weight: 800;
-  line-height: 0;
+  line-height: 1;
   margin: 3em 0 0 1em;
   color: black;
   text-decoration: none;
 }
 .box-cartes__text p:nth-child(2) {
+  margin-top: -0.5em;
   font-weight: 400;
 }
 .box-cartes__icons {
@@ -290,6 +295,21 @@
   margin-right: 0.5em;
 }
 
+@media screen and (max-width: 798px) {
+  .aside {
+    width: 40%;
+  }
+
+  .box-cartes__text {
+    width: 100%;
+    line-height: 1;
+  }
+  .box-cartes__config span {
+    border: 1px solid black;
+    top: 10px;
+    left: 28%;
+  }
+}
 #header {
   width: 100%;
   display: flex;
@@ -304,7 +324,6 @@
   flex-direction: column;
   background: url(./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   background-size: cover;
-  border: 1px solid black;
 }
 
 #cartes {
