@@ -1,0 +1,22 @@
+// SECTIONS CONFIG
+@mixin header {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+ 
+}
+
+@mixin container {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    background-size: cover;
+    flex-direction: column;
+}
+
+@mixin sections {
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+}

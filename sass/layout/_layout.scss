@@ -1,0 +1,16 @@
+//HEADER
+#header {
+    @include container ;  
+}
+
+.container {
+    @include container;
+    background: url(/assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg) no-repeat;
+    background-size: cover;
+}
+
+#cartes {
+    @include sections;
+    justify-content: space-around;
+    font-family: $shrikhand;
+}

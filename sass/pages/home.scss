@@ -1,0 +1,105 @@
+.menu {
+    width: 100%;
+    margin: 0 auto;
+    
+}
+.menu__top {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: $efectTop;
+    position: relative;
+    border: 1px soild;
+    justify-content: space-around;
+}
+.menu__top img {
+    margin:1em auto;
+    width: 100%;
+    max-width: 392px;
+    height: 68px;
+    z-index: 999;
+}
+
+// CARTES
+
+.box-cartes {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 245, 245, 0.648);
+    font-weight: 700;
+    border-radius: 10px;
+    margin-top: 1em;
+    
+    &__h1 {
+        margin-left: 0.6em;
+        color: black;
+        font-family: $roboto;
+    }
+
+    &__config {
+        width: 96%;
+        height: 200px;
+        display: flex;
+        font-family: $roboto;
+        border-radius: 10px;
+        background-color: white;
+        margin: 1em auto;
+        position: relative;
+        z-index: 1;
+    }
+    &__config span {
+        position: absolute;
+        color: white;
+        z-index: 999;
+        top: 10px; left: 43%;
+        background-color: $tertiaire;
+        padding: 0.5em 1.5em;
+        font-size: 15px;
+        color: #21a483;
+        font-weight: 600;
+    }
+    &__config img {
+        object-fit: cover;
+        width: 60%;
+        align-items: center;
+        border-radius: 10px 0px 0px 10px ;
+    }&__text {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 1;
+        margin: 2em auto;
+        color: black;
+    }&__text p:nth-child(2){
+        font-weight: 400;
+    }
+    &__icons {
+        margin: 0.6em auto;
+        font-size: 2em; 
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        box-sizing: border-box;
+        z-index: 1;
+    }
+    &__icons :active {
+        background: blue;
+    }
+
+}
+
+//ASIDE
+.aside {
+    margin-top: 1em;
+    width: 30%;
+    background-color: $backgroundFund;
+    border-radius: 10px;
+}
+
+
+
