@@ -24,8 +24,8 @@
 //BUTTON
 
 @mixin btn  {
-    margin-top: 1em;
-    padding: 1em;
+    margin-top: -2em;
+    padding: 1em 1.5em;
     border-radius: 20px;
     text-decoration: none;
     background-image: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);

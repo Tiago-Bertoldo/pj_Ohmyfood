@@ -11,7 +11,6 @@
     background-color: rgb(255, 255, 255);
     box-shadow: $efectTop;
     position: relative;
-    border: 1px soild;
     justify-content: space-around;
 }
 .menu__top img {
@@ -27,6 +26,17 @@
 main {
     overflow: hidden;
 }
+#cartes {
+    @include sections;
+    justify-content: space-evenly;
+    padding: 0;
+    font-family: $shrikhand;
+    text-decoration: none;
+    width: 100%;
+    max-width: 1600px;
+    display: flex;
+}
+
 .box-cartes {
     width: 55%;
     display: flex;
@@ -91,7 +101,6 @@ main {
         cursor: pointer;
         position: relative;
         box-sizing: border-box;
-        z-index: 1;
         width: 3%;
     }&__icons i {
         color: rgb(209, 207, 207);
@@ -115,7 +124,7 @@ main {
 //ASIDE
 .aside {
     margin: 3em auto;
-    width:30%;
+    width:36%;
     background-color: $backgroundFund;
     border-radius: 20px;
     display: flex;
@@ -152,7 +161,7 @@ main {
         align-items: center;
         font-family: $roboto;
         justify-items: center;   
-    }&__reserve h1 {
+    }&__reserve h2 {
         width: 80%;
         text-align-last: center;
         margin-top: 1.5em;
@@ -175,7 +184,7 @@ main {
     }
     &__functionne {
         margin-top: 3em;
-    }&__functionne h1 {
+    }&__functionne h2 {
         @include tailleh1;
     }&__menu {
         width: 100%;
@@ -255,20 +264,23 @@ main {
         color: white;
         flex-direction: column;
     }&__container h1 {
-        margin-left: 3.3em;
+        margin-left: 1em;
         font-size: 18px;
     }
     &__container ul {
+        margin-left: 1.5em;
+        padding: 0;
         list-style: none;
     }
     &__container li {
-        margin-bottom: 2em;
+        margin-bottom: 0.5em;
     }
     &__container a {
         color: white;
         text-decoration: none;
         font-family: $roboto;
         font-size: 12px;
+        line-height: 0;
     }
     &__container i{
         margin-right: 0.5em;
@@ -288,8 +300,81 @@ main {
         }&__config span {
             border: 1px solid black;
             top: 10px; left: 28%;
-        }&__text {
-
         }
+    }
+}
+
+@media screen and (max-width:600px){
+    .box-cartes {
+        flex-direction: column;
+        margin-top: -5em;
+        width: 100%;
+    }
+
+    .aside {
+        width: 100%;
+        background-color: white;
+
+        &__top {
+            margin: 0;
+            padding: 0;
+            margin-top: -2.5em;
+            border: none;
+            border-radius: 0;
+        }&__reserve p {
+            width: 100%;
+            font-size: 15px;
+        }&__reserve {
+            background-color: #f8f5f5;
+            padding-bottom: 3em ;
+        }
+    }
+
+    #cartes {
+        width: 100%;
+        border: 1px solid black;
+        flex-direction: column-reverse;
+    }
+    .menu__top {
+        height: 40px;
+    }
+    .menu__top img {
+        width: 100px;
+        height: 20px;
+    }
+
+    .box-cartes {
+        padding-bottom: 2em;
+        margin: 0 auto;
+        border-radius: 0;
+    }
+
+
+    .box-cartes__links {
+        flex-direction: column;
+        width: 100%;
+        
+    }
+    .box-cartes__config {
+        width: 98%;
+    }
+    .box-cartes__links img {
+        width: 99.9%;
+        margin: auto;
+        height: 70%;
+        border-radius: 10px 10px 0 0 ;
+    }
+    .box-cartes__text {
+        margin: 0 0 0 0.8em ;
+        padding: 0;
+        font-size: 13px;
+    }
+    .box-cartes__links span {
+        top: 15px; left: 70%;
+    }
+    .box-cartes__icons {
+        position: absolute;
+        right: 10px; top: 5.8em;
+
     }
 }

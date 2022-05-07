@@ -13,7 +13,6 @@
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 10px 13px -12px #000000, 1px 3px 13px 15px rgba(156, 147, 147, 0.12);
   position: relative;
-  border: 1px soild;
   justify-content: space-around;
 }
 
@@ -27,6 +26,20 @@
 
 main {
   overflow: hidden;
+}
+
+#cartes {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  padding: 0;
+  font-family: "Shrikhand", cursive;
+  text-decoration: none;
+  width: 100%;
+  max-width: 1600px;
+  display: flex;
 }
 
 .box-cartes {
@@ -97,7 +110,6 @@ main {
   cursor: pointer;
   position: relative;
   box-sizing: border-box;
-  z-index: 1;
   width: 3%;
 }
 .box-cartes__icons i {
@@ -119,7 +131,7 @@ main {
 
 .aside {
   margin: 3em auto;
-  width: 30%;
+  width: 36%;
   background-color: rgba(231, 235, 234, 0.6078431373);
   border-radius: 20px;
   display: flex;
@@ -154,7 +166,7 @@ main {
   font-family: "Roboto", sans-serif;
   justify-items: center;
 }
-.aside__reserve h1 {
+.aside__reserve h2 {
   width: 80%;
   text-align-last: center;
   margin-top: 1.5em;
@@ -171,8 +183,8 @@ main {
   color: rgb(107, 107, 107);
 }
 .aside__reserve a {
-  margin-top: 1em;
-  padding: 1em;
+  margin-top: -2em;
+  padding: 1em 1.5em;
   border-radius: 20px;
   text-decoration: none;
   background-image: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
@@ -188,7 +200,7 @@ main {
 .aside__functionne {
   margin-top: 3em;
 }
-.aside__functionne h1 {
+.aside__functionne h2 {
   margin-left: 0.7em;
   color: black;
   font-size: 30px;
@@ -276,20 +288,23 @@ main {
   flex-direction: column;
 }
 .footer__container h1 {
-  margin-left: 3.3em;
+  margin-left: 1em;
   font-size: 18px;
 }
 .footer__container ul {
+  margin-left: 1.5em;
+  padding: 0;
   list-style: none;
 }
 .footer__container li {
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
 }
 .footer__container a {
   color: white;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
+  line-height: 0;
 }
 .footer__container i {
   margin-right: 0.5em;
@@ -310,7 +325,88 @@ main {
     left: 28%;
   }
 }
-#header {
+@media screen and (max-width: 600px) {
+  .box-cartes {
+    flex-direction: column;
+    margin-top: -5em;
+    width: 100%;
+  }
+
+  .aside {
+    width: 100%;
+    background-color: white;
+  }
+  .aside__top {
+    margin: 0;
+    padding: 0;
+    margin-top: -2.5em;
+    border: none;
+    border-radius: 0;
+  }
+  .aside__reserve p {
+    width: 100%;
+    font-size: 15px;
+  }
+  .aside__reserve {
+    background-color: #f8f5f5;
+    padding-bottom: 3em;
+  }
+
+  #cartes {
+    width: 100%;
+    border: 1px solid black;
+    flex-direction: column-reverse;
+  }
+
+  .menu__top {
+    height: 40px;
+  }
+
+  .menu__top img {
+    width: 100px;
+    height: 20px;
+  }
+
+  .box-cartes {
+    padding-bottom: 2em;
+    margin: 0 auto;
+    border-radius: 0;
+  }
+
+  .box-cartes__links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .box-cartes__config {
+    width: 98%;
+  }
+
+  .box-cartes__links img {
+    width: 99.9%;
+    margin: auto;
+    height: 70%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .box-cartes__text {
+    margin: 0 0 0 0.8em;
+    padding: 0;
+    font-size: 13px;
+  }
+
+  .box-cartes__links span {
+    top: 15px;
+    left: 70%;
+  }
+
+  .box-cartes__icons {
+    position: absolute;
+    right: 10px;
+    top: 5.8em;
+  }
+}
+header {
   width: 100%;
   display: flex;
   margin: auto;
@@ -324,19 +420,6 @@ main {
   flex-direction: column;
   background: url(./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   background-size: cover;
-}
-
-#cartes {
-  width: 100%;
-  margin: auto;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-evenly;
-  padding: 0;
-  font-family: "Shrikhand", cursive;
-  text-decoration: none;
-  width: 100%;
-  max-width: 1600px;
 }
 
 footer {
