@@ -1,21 +1,30 @@
-//HEADER
-header {
-    @include container ;  
+//RESPOSIVE RESERVEZ
+@media screen and (max-width:690px) {
+    .reservez {
+        flex-wrap: wrap;
+        &__button {
+            width: 100%;
+            background-color: $backgroundRez;
+            height: 250px;
+        }&__fonction {
+            width: 100%;
+            background-color: white;
+        }&__fonction h1 {
+           width: 100%;
+           margin-left: 1em;
+        }
+    }
+    
 }
 
-.container {
-    @include container;
-    background: url(./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-    background-size: cover; 
-}
-
-
-
-footer {
-    background-color: rgb(79, 76, 76);
-    min-height: 200px;
-    width: 100%;
-    margin: auto;
-    display: flex;
+@media screen and (max-width:790px){
+    .resto {
+       &__box {
+           flex-wrap: wrap;
+       }
+        &__box > div {
+            flex: 1 1 280px;
+        }
+    }
 }
 

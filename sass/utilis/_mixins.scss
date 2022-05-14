@@ -1,50 +1,11 @@
-// SECTIONS CONFIG
-@mixin header {
-    width: 100%;
-    display: flex;
-    margin: 0 auto;
- 
-}
-
-@mixin container {
-    width: 100%;
-    display: flex;
-    margin: auto;
-    flex-direction: column;
-    
-}
-
-@mixin sections {
-    width: 100%;
-    margin: auto;
-    display: flex;    
-    flex-direction: row-reverse;
-}
-
-//BUTTON
-
-@mixin btn  {
-    margin-top: 1em;
-    padding: 1em 1.5em;
-    border-radius: 20px;
+@mixin btn-top {
     text-decoration: none;
-    background-image: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
-    color: white;
+    color: rgb(255, 255, 255);
+    padding: 0.9em 1.8em;
+    border-radius: 25px;
+    background-image: linear-gradient(to right bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
     font-size: 14px;
-    box-shadow: $efectTop;
-    border: none;  
-    transition: transform 200ms , color 250ms ease-in-out;
+    font-weight: 400;
+    font-family: $roboto;
 }
 
-@mixin tailleh1 {
-    margin-left: 0.7em;
-        color: black;
-        font-size: 30px;
-        font-family: $roboto;
-}
-
-@mixin marginEpadding {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}

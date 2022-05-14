@@ -1,383 +1,202 @@
-.menu {
-    width: 100%;
-    margin: 0 auto;
-    
-}
-.menu__top {
-    display: flex;
-    width: 100%;
-    height: 100px;
-    margin: 0 auto;
-    background-color: rgb(255, 255, 255);
-    box-shadow: $efectTop;
-    position: relative;
-    justify-content: space-around;
-}
-.menu__top img {
-    margin:1em auto;
-    width: 100%;
-    max-width: 392px;
-    height: 68px;
-    z-index: 999;
-}
-
-// CARTES
-
-main {
-    overflow: hidden;
-}
-#cartes {
-    @include sections;
-    justify-content: space-evenly;
+* {
     padding: 0;
-    font-family: $shrikhand;
-    text-decoration: none;
-    width: 100%;
-    max-width: 1600px;
-    display: flex;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.box-cartes {
-    width: 55%;
+#header {
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    margin: 0 auto;
+    box-shadow: $efectTop;
+}
+
+#main {
+    font-family: $roboto;
+}
+
+.nav {
+    height: 5em;
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+
+// END NAV
+
+.localisation {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
     background-color: $backgroundFund;
-    font-weight: 500;
-    border-radius: 20px;
-    margin: 3em auto;
-    position: relative;
-    
-    &__h1 {
-       @include tailleh1;
-    }
-
-    &__config {
-        width: 96%;
-        height: 200px;
-        display: flex;
+    & span {
+        padding: 1em;
+        font-size: 17px;
+    }& p {
         font-family: $roboto;
-        border-radius: 10px;
-        background-color: white;
-        margin: 1em auto;
-        position: relative;
-        justify-content: space-around;
-        transition: all 250ms;
-    }
-
-    &__config span {
-        position: absolute;
-        color: white;
-        z-index: 999;
-        top: 10px; left: 43%;
-        background-color: $tertiaire;
-        padding: 0.5em 1.5em;
         font-size: 15px;
-        color: #21a483;
-        font-weight: 600;
+        color: $colorFontTop;
+        font-weight: 700;
     }
-    &__config img {
-        object-fit: cover;
-        width: 65%;
+}
+
+
+.reservez {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    &__button , &__fonction{
+        display: flex;
         align-items: center;
-        border-radius: 10px 0px 0px 10px ;
-    }&__text {
-        width: 30%;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }&__button {
+        width: 50%;
+    }&__fonction {
+        width: 60%;
+        padding: 1em;
+    }
+    & p {
+        width: 70%;
+        font-size: 16px;
+        line-height: 1.3;
+    }& h1 {
+        font-size: 26px;
+        width: 60%;
+        display: flex;
+    }& ul {
         display: flex;
         flex-direction: column;
-        font-size: 20px;
-        font-weight: 800;
-        line-height: 1;
-        margin: 3em 0 0 1em;
-        color: black;
-        text-decoration: none;
-    }&__text p:nth-child(2){
-        margin-top: -0.5em;
-        font-weight: 400;
-    }
-    &__icons {
-        margin: 0.8em 0.8em 0em 0;
-        font-size: 2em; 
-        text-decoration: none;
-        cursor: pointer;
         position: relative;
-        box-sizing: border-box;
-        width: 3%;
-    }&__icons i {
-        color: rgb(209, 207, 207);
+        align-items: center;
+
+    }& li {
+        padding: 2em;
+        list-style: none;
+        border-radius: 20px;
+        box-shadow: $efectTop;
+        margin-top: 1em;
+        margin-bottom: 0.7em;
+    }& a {
+        text-decoration: none;
+        font-family: $roboto;
+        font-size: 16px;
+        padding: 0.8em 2.2em;
+        color: black;
+        font-weight: 600;        
+    }&__number {
+        position: absolute;
+        left: -8px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: $primaire;
+        color: white;
+        font-size: 11px;
+    }& i {
+        padding: 0 0 0 1em;
+      font-size: 18px;
+      color: rgb(162, 162, 162);  
     }
-    &__icons i:active {
+
+// BUTTON RESERVEZ
+    .rz_font{
+        margin-top: 2em ;
+       @include btn-top;
+       box-shadow: $efectTop;
+       transform: scale(1) ;
+       transition: transform 400ms ease-in-out;
+       color: white;
+    }
+    .rz_font:hover {
+        transform: scale(1.1);
+        }
+}
+
+
+//START RESTO BOX
+.container__resto {
+    width: 100%;
+    background-color: $backgroundFund;
+
+}
+.resto {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    margin: 2em auto;
+    flex-direction: column;
+
+    & h1 {
+        margin-left: 1.2em;
+        margin-top: 2em;
+    }
+    &__box {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }&__box > div {
+        width: 45%;
+        box-shadow: $efectTop;
+        border-radius: 20px 20px 20px 20px ;
+        position: relative;
+        min-height: 220px;
+        font-family: $roboto;
+        margin: 1em 2em 2em 2em;
+    }&__box > div img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0 ;
+    }&__box > div i {
+        position: absolute;
+        font-size: 22px;
+        right: 1em; bottom: 1em;
+        cursor: pointer;
+        transition: all 120ms cubic-bezier(.05,.33,.86,.38);
+        transform-origin: bottom;
+        transform: scaleY(1);
+        color: rgb(201, 199, 199);
+    }
+    &__box > div i:active {
+        transform: scaleY(1.1) ;
         color: $primaire;
     }
-    &__links {
-        display: flex;
-        width: calc(100% - 6%);
-        text-decoration: none;
-        transition: transform 250ms;
 
-    }&__config:hover {
-        transform: scale(1.02);
-        opacity: 0.8;
-    }
-
-}
-
-//ASIDE
-.aside {
-    margin: 3em auto;
-    width:36%;
-    background-color: $backgroundFund;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    height: 720px;
-    margin-bottom: 2em;
-
-    &__top , &__reserve , &__functionne{
-        width: 100%;
-       
-    }
-
-    &__top {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: $roboto;
-        font-weight: 700;
-        font-size: 15px;
-        color: rgb(82, 82, 82);
-        background-color: rgb(235, 233, 233);
-        border-radius: 20px 20px 0 0 ;
-    }&__top p {
-        margin: 1em;
-    }
-    &__top i {
-        color: black;
-    }
-
-    //aside_reserve
-    &__reserve {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: $roboto;
-        justify-items: center;  
-    }&__reserve h2 {
-        width: 80%;
-        text-align-last: center;
-        margin-top: 1.5em;
-        text-align: center;
-    }&__reserve p {
-        margin-top: -0.5em;
-        width: 80%;
-        font-size: 13px;
-        text-align:center;
-        line-height: 1.3;
-        word-wrap: break-word;
+    &__box span:nth-child(2) {
+        color: white;
+        position: absolute;
+        right: 2em; top: 1em;
+        padding: 0.6em 1.5em;
+        color: #34584f;
+        font-size: 14px;
         font-weight: 500;
-        color: rgb(107, 107, 107);
+        background-color: $tertiaire;
     }
-    &__reserve a {
-        margin-top: 2em;
-        @include btn;
-    }
-    &__reserve a:active {
-        transform: scale(1.15);
-    }
-    &__functionne {
-        margin-top: 3em;
-    }&__functionne h2 {
-        @include tailleh1;
-    }&__menu {
-        width: 100%;
-        display: flex;
-    }&__menu ul {
-        @include marginEpadding;
-        list-style: none;
-        width: 90%;
-        margin: auto;
-        cursor: pointer;
-    
-
-    }&__menu li {
-        border-radius: 20px;
-        width: 100%;
-        max-width: 500px;
-        margin-top: 2em;
-        text-align: center;
-        display: flex;
-        height: 60px;
-        position: relative;
-        background-color: #f6f6f6;
-        box-shadow: $efectTop;
-        transition: all 250ms ;
-    }&__menu a {
+    &__box > div  h2 {
+        margin-left: 0.5em;
+        line-height: 2;
+        font-size: 19px;
+    }&__box > div p {
+        margin-left: 0.7em;
         font-size: 15px;
-        text-decoration: none;
-        color: black;
-        font-family: $roboto;
-        display: flex;
-        align-items: center;
-        margin-left: 1em;
-        font-weight: 600;
-    }&__menu span {
-        display: flex;
-        position: absolute;
-        left: -9px;
-        top: 20px;
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        color: white;
-        font-size: 10px;
-        justify-content: center;
-        align-items: center;
-        background-color: $primaire;
-        font-family: $roboto;
-    }&__menu i {
-        font-size: 15px;
-        display: flex;
-        margin-left: 2em;
-        align-items: center;
-        color: #aaaaaa;
-        transition: all 250ms ;
-       
-    }&__menu li:hover {
-        transform: scale(1.05);
-        background-color: #f5edff;
-    }&__menu i:hover {
-        color: #f5edff;
+    }&__span {
+        font-size: 20px;
     }
-   
+
 }
 
 
 
-.footer {
-    display: flex;
-    width: 100%;
-    background-color: #3f3f3f;
-    margin: auto;
-    &__container {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        font-family: $shrikhand;
-        color: white;
-        flex-direction: column;
-    }&__container h1 {
-        margin-left: 1em;
-        font-size: 18px;
-    }
-    &__container ul {
-        margin-left: 1.5em;
-        padding: 0;
-        list-style: none;
-    }
-    &__container li {
-        margin-bottom: 0.5em;
-    }
-    &__container a {
-        color: white;
-        text-decoration: none;
-        font-family: $roboto;
-        font-size: 12px;
-        line-height: 0;
-    }
-    &__container i{
-        margin-right: 0.5em;
-    }
-}
-
-//TABLET
-
-@media screen and (max-width:798px) {
-    .aside {
-        width: 40%;
-    }
-    .box-cartes {
-        &__text {
-            width: 100%;
-            line-height: 1;
-        }&__config span {
-            border: 1px solid black;
-            top: 10px; left: 28%;
-        }
-    }
-}
-
-@media screen and (max-width:600px){
-    .box-cartes {
-        flex-direction: column;
-        margin-top: -5em;
-        width: 100%;
-    }
-
-    .aside {
-        width: 100%;
-        background-color: white;
-
-        &__top {
-            margin: 0;
-            padding: 0;
-            margin-top: -2.5em;
-            border: none;
-            border-radius: 0;
-        }&__reserve p {
-            width: 100%;
-            font-size: 15px;
-        }&__reserve {
-            background-color: #f8f5f5;
-            padding-bottom: 3em ;
-        }&__reserve a {
-            margin-top: -3em;
-        }
-    }
-
-    #cartes {
-        width: 100%;
-        border: 1px solid black;
-        flex-direction: column-reverse;
-    }
-    .menu__top {
-        height: 40px;
-    }
-    .menu__top img {
-        width: 100px;
-        height: 20px;
-    }
-
-    .box-cartes {
-        padding-bottom: 2em;
-        margin: 0 auto;
-        border-radius: 0;
-    }
-
-
-    .box-cartes__links {
-        flex-direction: column;
-        width: 100%;
-        
-    }
-    .box-cartes__config {
-        width: 98%;
-    }
-    .box-cartes__links img {
-        width: 99.9%;
-        margin: auto;
-        height: 70%;
-        border-radius: 10px 10px 0 0 ;
-    }
-    .box-cartes__text {
-        margin: 0 0 0 0.8em ;
-        padding: 0;
-        font-size: 13px;
-    }
-    .box-cartes__links span {
-        top: 15px; left: 70%;
-    }
-    .box-cartes__icons {
-        position: absolute;
-        right: 10px; top: 5.8em;
-
-    }
-}
