@@ -23,6 +23,13 @@
   flex-direction: column;
   object-fit: cover;
   position: relative;
+  z-index: 1;
+}
+.container__bar {
+  width: 2%;
+  margin-left: 4.5em;
+  border-bottom: 2px solid green;
+  position: absolute;
 }
 .container__boximg {
   width: 100%;
@@ -51,16 +58,14 @@
   width: 100%;
   max-width: 1024px;
   display: flex;
-  margin: auto;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: space-between;
   background-color: white;
   border-radius: 50px 50px 0 0;
 }
 .container__top i {
-  position: absolute;
-  right: 3.5em;
-  top: 2em;
-  font-size: 18px;
+  font-size: 20px;
+  margin-right: 2em;
 }
 .container__top h1 {
   font-family: "Shrikhand", cursive;
@@ -82,6 +87,9 @@
 }
 .container__articles__entre, .container__articles__plats, .container__articles__desserts {
   width: 50%;
+}
+.container__articles > .container__entre > .bar {
+  background-color: blue;
 }
 .container__articles h2 {
   font-weight: normal;
@@ -142,10 +150,10 @@
   margin-left: 1em;
   font-size: 14px;
   line-height: 2;
-  font-weight: 400;
+  font-weight: 600;
 }
 .btnslf p {
-  margin-left: 1.5em;
+  margin-left: 1.2em;
 }
 
 .btnschecked {
@@ -159,6 +167,7 @@
 .btnschecked__sp {
   width: 30%;
   transform-origin: right;
+  font-weight: 600;
 }
 .btnschecked__check span {
   display: inline-block;
@@ -196,6 +205,13 @@
 .btnschecked__check i {
   position: relative;
   z-index: 2;
+}
+
+.barre {
+  width: 2%;
+  margin-left: 4.5em;
+  border-bottom: 2px solid green;
+  position: absolute;
 }
 
 @keyframes progress {
