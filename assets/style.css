@@ -1,5 +1,219 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.nav__resto {
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.nav img {
+  width: 20%;
+  margin: 0 auto;
+}
+.nav a {
+  color: black;
+  font-size: 22px;
+  margin-left: 0.5em;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
+  position: relative;
+}
+.container__boximg {
+  width: 100%;
+  height: 500px;
+  margin: auto;
+}
+.container__boximg img {
+  width: 100%;
+  object-fit: cover;
+  height: 500px;
+}
+.container__menu {
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: -5em;
+  background-color: white;
+  position: relative;
+}
+.container__top {
+  position: absolute;
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  background-color: white;
+  border-radius: 50px 50px 0 0;
+}
+.container__top i {
+  position: absolute;
+  right: 3.5em;
+  top: 2em;
+  font-size: 18px;
+}
+.container__top h1 {
+  font-family: "Shrikhand", cursive;
+  margin: 1.5em 0em 0em 1em;
+}
+.container__entre {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.container__entre h2 {
+  margin: 2em 0em 0em 3em;
+}
+.container__articles {
+  display: flex;
+  flex-direction: row;
+}
+.container__articles__entre, .container__articles__plats, .container__articles__desserts {
+  width: 50%;
+}
+.container__articles h2 {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+}
+.container__btn {
+  text-align: center;
+  margin-bottom: 3em;
+}
+.container__btn a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 0.9em 1.8em;
+  border-radius: 25px;
+  background-image: linear-gradient(to right bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
+
+.btns {
+  width: 100%;
+  margin: auto;
+  padding: 2em;
+  display: flex;
+  cursor: pointer;
+  flex-wrap: wrap;
+}
+.btns__box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 5px 5px 5px 0px #eaeaea;
+  border-radius: 20px;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.btns__box:hover > .btnslf + .btnschecked > .btnschecked__sp {
+  animation: scalede 1s cubic-bezier(0.32, 0, 0.07, 1) both;
+}
+.btns__box:hover > .btnslf + .btnschecked > .btnschecked__check span {
+  transform: translateX(0) rotate(0);
+  opacity: 1;
+}
+.btns__box:hover > .btnslf + .btnschecked > .btnschecked__check::after {
+  animation: progress 1500ms cubic-bezier(0.32, 0, 0.07, 1) both;
+}
+
+.btnslf {
+  width: 80%;
+  height: 80px;
+  border-radius: 20px 0px 0px 20px;
+}
+.btnslf h3 {
+  margin-top: 1em;
+  margin-left: 1em;
+  font-size: 14px;
+  line-height: 2;
+  font-weight: 400;
+}
+.btnslf p {
+  margin-left: 1.5em;
+}
+
+.btnschecked {
+  width: 20%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0px 30px 30px 0;
+}
+.btnschecked__sp {
+  width: 30%;
+  transform-origin: right;
+}
+.btnschecked__check span {
+  display: inline-block;
+  transform: translateX(300%) rotate(-360deg);
+  transition: all 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  font-size: 18px;
+  color: white;
+  position: relative;
+  z-index: 100;
+  opacity: 0;
+}
+.btnschecked__check {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 30px 30px 0;
+  position: relative;
+}
+.btnschecked__check::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #99E2D0;
+  border-radius: 0px 20px 20px 0;
+  transform-origin: right;
+  z-index: 1;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.btnschecked__check i {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes progress {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes scalede {
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -148,8 +362,12 @@
   margin: 2em auto;
   flex-direction: column;
 }
+.resto a {
+  text-decoration: none;
+  color: black;
+}
 .resto h1 {
-  margin-left: 1.2em;
+  margin-left: 1em;
   margin-top: 2em;
 }
 .resto__box {
@@ -157,6 +375,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .resto__box > div {
   width: 45%;
@@ -166,6 +385,7 @@
   min-height: 220px;
   font-family: "Roboto", sans-serif;
   margin: 1em 2em 2em 2em;
+  flex: 1 1 350px;
 }
 .resto__box > div img {
   width: 100%;
@@ -212,9 +432,61 @@
   font-size: 20px;
 }
 
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  justify-content: center;
+  align-items: flex-start;
+  margin: auto;
+}
+.footer__boxe {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.footer img {
+  width: 15%;
+}
+.footer ul {
+  width: 100%;
+  margin: auto;
+  margin-top: 1em;
+}
+.footer li {
+  list-style: none;
+  margin-top: 0.6em;
+}
+.footer li:nth-child(4), .footer li:nth-child(3) {
+  margin-left: 0.6em;
+}
+.footer h3 {
+  color: rgb(255, 255, 255);
+  font-family: "Shrikhand", cursive;
+  margin-top: 1em;
+  font-size: 15px;
+  margin-left: 1em;
+}
+.footer a {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  margin-left: 0.4em;
+}
+.footer i {
+  margin-left: 1em;
+  color: white;
+}
+
+.fa-utensils {
+  font-size: 14px;
+}
+
 @media screen and (max-width: 690px) {
   .reservez {
-    flex-wrap: wrap;
+    flex-direction: column;
   }
   .reservez__button {
     width: 100%;
@@ -229,13 +501,16 @@
     width: 100%;
     margin-left: 1em;
   }
+  .reservez a {
+    font-size: 11px;
+  }
 }
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 769px) {
   .resto__box {
     flex-wrap: wrap;
   }
-  .resto__box > div {
-    flex: 1 1 280px;
+  .resto div {
+    flex: 1 1 250px;
   }
 }
 

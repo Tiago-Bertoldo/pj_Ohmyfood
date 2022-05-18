@@ -1,7 +1,7 @@
 //RESPOSIVE RESERVEZ
 @media screen and (max-width:690px) {
     .reservez {
-        flex-wrap: wrap;
+        flex-direction: column;
         &__button {
             width: 100%;
             background-color: $backgroundRez;
@@ -13,18 +13,20 @@
            width: 100%;
            margin-left: 1em;
         }
+        & a {
+            font-size: 11px;
+        }
     }
     
 }
 
-@media screen and (max-width:790px){
+@media screen and (max-width:769px){
     .resto {
        &__box {
            flex-wrap: wrap;
+       }& div {
+            flex: 1 1 250px;
        }
-        &__box > div {
-            flex: 1 1 280px;
-        }
     }
 }
 

@@ -137,9 +137,12 @@
     display: flex;
     margin: 2em auto;
     flex-direction: column;
-
+   & a {
+    text-decoration: none;
+    color: black;
+   }
     & h1 {
-        margin-left: 1.2em;
+        margin-left: 1em;
         margin-top: 2em;
     }
     &__box {
@@ -147,6 +150,8 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap;
+
     }&__box > div {
         width: 45%;
         box-shadow: $efectTop;
@@ -155,6 +160,7 @@
         min-height: 220px;
         font-family: $roboto;
         margin: 1em 2em 2em 2em;
+        flex: 1 1 350px;
     }&__box > div img {
         width: 100%;
         height: 150px;
@@ -199,4 +205,53 @@
 }
 
 
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+    &__boxe {
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    & img {
+        width: 15%;
+    }& ul {
+        width: 100%;
+        margin: auto;
+        margin-top: 1em;
+    }& li {
+        list-style: none;
+        margin-top: 0.6em;
+    }
+    & li:nth-child(4) , li:nth-child(3){
+        margin-left: 0.6em;
+    }
+    & h3 {
+        color: rgb(255, 255, 255);
+        font-family: $shrikhand;
+        margin-top: 1em;
+        font-size: 15px;
+        margin-left: 1em;
+    }
+    & a {
+        font-family: $roboto;
+        text-decoration: none;
+        color: white;
+        font-size: 12px;
+        margin-left: 0.4em;
 
+    }& i {
+        margin-left: 1em;
+        color: white;
+    }
+
+}
+
+.fa-utensils {
+    font-size: 14px;
+}

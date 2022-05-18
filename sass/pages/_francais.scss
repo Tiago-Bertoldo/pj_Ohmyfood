@@ -1,0 +1,210 @@
+.nav {
+    &__resto {
+        width: 100%;
+        max-width: 1024px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+    }& img {
+        width: 20%;
+        margin: 0 auto;
+    }
+    & a {
+        color: black;
+        font-size: 22px;
+        margin-left: 0.5em;
+    }
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    object-fit: cover;
+    position: relative;
+    &__boximg {
+        width: 100%;
+        height: 500px;
+        margin: auto;
+    }
+    &__boximg img {
+        width: 100%;
+        object-fit: cover;
+        height: 500px;
+    }
+    &__menu {
+        width: 100%;
+        max-width: 1024px;
+        margin: auto;
+        position: absolute;
+        right: 0; left: 0; bottom: 0; top:-5em;
+        background-color: white;
+        position: relative;
+    }
+    &__top {
+        position: absolute;
+        width: 100%;
+        max-width: 1024px;
+        display: flex;
+        margin:auto;
+        align-items: center;
+        background-color: white;
+        border-radius: 50px 50px 0 0 ;
+    }&__top i {
+        position: absolute;
+        right: 3.5em;
+        top: 2em;
+        font-size: 18px;
+    }
+    &__top h1 {
+        font-family: $shrikhand;
+        margin: 1.5em 0em 0em 1em;
+    }&__entre {
+        width: 100%;
+        max-width: 1024px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        & h2 {
+            margin: 2em 0em 0em 3em;
+        }
+    }&__articles {
+        display: flex;
+        flex-direction: row;
+        &__entre , &__plats , &__desserts{
+            width: 50%;
+        }
+       & h2 {
+            font-weight: normal;
+            text-transform: uppercase;
+            font-family: $roboto;
+       }
+    }&__btn {
+       text-align: center;
+       margin-bottom: 3em;
+        & a {
+           @include btn-top;
+    
+        }
+    }
+}
+
+.btns {
+    width: 100%;
+    margin: auto;
+    padding: 2em;
+    display: flex;
+    cursor: pointer;
+    flex-wrap: wrap;
+    &__box {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        box-shadow: $boxShadow;
+        border-radius: 20px;
+        // flex: 1 1 230px;
+        margin-left: 1em;
+        margin-right: 1em;
+        margin-bottom: 1em;
+        &:hover {
+                & > .btnslf {
+                    & + .btnschecked {
+                        & > .btnschecked__sp {
+                            animation: scalede 1s cubic-bezier(.32,0,.07,1) both;
+                        }
+                       
+                        & > .btnschecked__check {
+                            & span {
+                                transform: translateX(0) rotate(0);
+                                opacity: 1;
+                            }
+                            &::after {
+                                animation: progress 1500ms cubic-bezier(.32,0,.07,1) both;
+                            }
+                        }
+                    } 
+                }
+            }
+    }
+ }
+
+.btnslf {
+    width: 80%;
+    height: 80px;
+    border-radius: 20px 0px 0px 20px ;
+    & h3 {
+        margin-top: 1em;
+        margin-left: 1em;
+        font-size: 14px;
+        line-height: 2;
+        font-weight: 400;
+    }& p {
+        margin-left: 1.5em;
+    }
+}
+.btnschecked {
+    width: 20%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0px 30px 30px 0 ;
+    &__sp {
+        width: 30%;
+        transform-origin: right;
+    }
+    &__check span {
+        display: inline-block;
+        transform: translateX(300%) rotate(-360deg);
+        transition: all 1000ms cubic-bezier(.32,0,.07,1);
+        font-size: 18px;
+        color: white;
+        position: relative;
+        z-index: 100;
+        opacity: 0;
+    }
+    &__check {
+        width: 100%;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0px 30px 30px 0 ;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background-color: $tertiaire;
+            border-radius: 0px 20px 20px 0 ;
+            transform-origin: right;
+            z-index: 1;
+            transform: scaleX(0);
+            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+        }& i {
+            position: relative;
+            z-index: 2;
+        }
+    }
+}
+
+@keyframes progress {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes scalede {
+    50% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
