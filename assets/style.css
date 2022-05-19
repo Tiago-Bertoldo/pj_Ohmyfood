@@ -30,7 +30,7 @@
   z-index: 1;
 }
 .container__bar {
-  width: 2%;
+  width: 3%;
   margin-left: 4.5em;
   border-bottom: 2px solid green;
   position: absolute;
@@ -130,6 +130,8 @@
   flex-direction: row;
   box-shadow: 5px 5px 5px 0px #eaeaea;
   border-radius: 20px;
+  animation: slowmovie 4500ms cubic-bezier(0.32, 0, 0.07, 1) both;
+  transform-origin: top;
   margin-left: 1em;
   margin-right: 1em;
   margin-bottom: 1em;
@@ -145,6 +147,14 @@
   animation: progress 1500ms cubic-bezier(0.32, 0, 0.07, 1) both;
 }
 
+@keyframes slowmovie {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .btnslf {
   width: 80%;
   height: 80px;
@@ -488,6 +498,7 @@
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
+  margin-bottom: 2em;
 }
 .footer img {
   width: 15%;

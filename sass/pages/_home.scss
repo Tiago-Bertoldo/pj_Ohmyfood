@@ -234,10 +234,12 @@
     justify-content: center;
     align-items: flex-start;
     margin: auto;
+
     &__boxe {
         width: 100%;
         max-width: 1024px;
         margin: 0 auto;
+        margin-bottom: 2em;
     }
     & img {
         width: 15%;
