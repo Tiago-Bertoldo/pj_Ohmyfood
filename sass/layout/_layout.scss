@@ -15,6 +15,23 @@
         }
         & a {
             font-size: 11px;
+        }& li {
+            &:hover {
+                opacity: .9;
+                &::after {
+                    opacity: 0.3;
+                }
+               
+            }
+        }&::after {
+            content: "";
+            background-color: $primaire;
+            position: absolute;
+            right: 0; top: 0; left: 0; bottom: 0;
+            transition: 1000ms ease;
+            opacity: 0;
+            border-radius: 20px;
+            z-index: -9999;
         }
     }
     

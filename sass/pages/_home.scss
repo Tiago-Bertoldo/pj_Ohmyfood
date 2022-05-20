@@ -88,11 +88,12 @@
         position: relative;
         cursor: pointer;
         &:hover {
+
             &::after {
                 opacity: 0.3;
             }
             & >  .fas{
-                color: $primaire;;
+                color: $primaire;
             }
         } 
         &::after {
