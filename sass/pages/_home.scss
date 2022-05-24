@@ -5,18 +5,31 @@
 }
 
 body {
-    animation: opacity 5s ease both;
+    animation: opacity 3s ease both;
+    position: relative;
+    .backgg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: white;
+        z-index: 999999;
+        animation: teste 6s ease both;
+    }
 }
+
+
 
 #header {
     width: 100%;
     display: flex;
     margin: 0 auto;
     box-shadow: $efectTop;
+    overflow: hidden;
 }
 
 #main {
     font-family: $roboto;
+    overflow: hidden;
 }
 
 .nav {
@@ -27,6 +40,7 @@ body {
     justify-content: center;
     margin: auto;
     align-items: center;
+    overflow: hidden;
 }
 
 // END NAV
@@ -50,48 +64,50 @@ body {
 }
 
 
-.loader {
+.testando {
     width: 100%;
     height: 100%;
     display: flex;
     position: absolute;
-    animation: teste 8s ease both;
+    animation: teste 5s ease both;
     animation-fill-mode: forwards;
     justify-content: center;
     justify-content: center;
     align-items: center;
-    top: -3em;
-    z-index: 1;
+    z-index: 99999999;
+    top: -50px;
     & > div {
-        position: relative;
-        display: flex;
-        width: 3px;
-        height: 100px;
-        background-color: #353535;
-        border-radius: 10px;
-        animation: scale 1s linear infinite;        
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        margin: 8px;
+        border: 8px solid #fff;
+        border-radius: 50%;
+        animation: lds-ring 2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: $primaire transparent transparent transparent;
+    }   
+    & > div:nth-child(1){
+        animation-delay: -0.45s;
     }& > div:nth-child(2){
-        height: 55px;
-        margin: 0 5px;
-        animation-delay: .25s;
+        animation-delay: -0.3s;
     }& > div:nth-child(3){
-        height: 35px;
-        margin: 0 5px;
-        animation-delay: .5s;
+        animation-delay: -0.15s;
     }
 }
 
-@keyframes scale {
-    20% {
-        background-color: #fff;
-        transform: scaleY(1.5);
-        opacity: 1;
+@keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
     }
-    40% {
-        transform: scaleX(1);
-        opacity: 0;
+    100% {
+      transform: rotate(360deg);
     }
-}
+  }
+
+
+
 
 @keyframes teste {
     0% {
@@ -99,6 +115,10 @@ body {
         opacity: 1;
     }
     50% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    80% {
         transform: translateX(0);
         opacity: 0;
     }
@@ -119,6 +139,7 @@ body {
 }
 
 .reservez {
+    overflow: hidden;
     width: 100%;
     max-width: 1024px;
     display: flex;
@@ -221,6 +242,9 @@ body {
 
 //START RESTO BOX
 .container__resto {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
     width: 100%;
     background-color: $backgroundFund;
 
@@ -300,6 +324,7 @@ body {
 
 
 .footer {
+    overflow: hidden;
     width: 100%;
     display: flex;
     flex-direction: column;
