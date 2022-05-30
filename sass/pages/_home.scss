@@ -291,8 +291,9 @@ body {
         cursor: pointer;
         transition: all 120ms cubic-bezier(.05,.33,.86,.38);
         transform-origin: bottom;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         transform: scaleY(1);
-        color: rgb(201, 199, 199);
+        color: white;
     }
     &__box > div i:hover {
         transform: scaleY(1.1) ;
