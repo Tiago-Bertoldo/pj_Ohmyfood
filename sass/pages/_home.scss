@@ -97,6 +97,7 @@ body {
     }
 }
 
+// ANIMATION POUR LES CHARGEMENT CIRCLE
 @keyframes lds-ring {
     0% {
       transform: rotate(0deg);
@@ -105,10 +106,7 @@ body {
       transform: rotate(360deg);
     }
   }
-
-
-
-
+// EFFECT DANS TOUS LE PAGE
 @keyframes teste {
     0% {
         transform: translateX(0);
@@ -127,7 +125,7 @@ body {
         transform: translateX(-1500px);
     }
 }
-
+// EFFECT OPACITY PAGES RESTAURANTS
 @keyframes opacity {
     from {
         opacity: 0;
@@ -137,7 +135,6 @@ body {
         opacity: 1;
     }
 }
-
 .reservez {
     overflow: hidden;
     width: 100%;
